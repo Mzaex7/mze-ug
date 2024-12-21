@@ -1,0 +1,52 @@
+/* src/css/custom.css */
+.padding-left-180 {
+  padding-left: 180px;
+}
+
+.hero {
+  padding: 4rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 100px;
+}
+
+
+.subtitle {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.tagline {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.services {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.description {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  margin: 40px 0 20px 0;
+}
+
+.list {
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.list ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}

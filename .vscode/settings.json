@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/beff53b7-fdbe-4aa8-afb8-4b0c248cb690/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/markzeiter",
+    "appService.deploySubpath": "."
+}

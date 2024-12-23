@@ -49,10 +49,10 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: '',
+      title: 'Mark Zeitler Engineering',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.JPG',
+        src: 'img/logo.jpg',
       },
       items: [
         {
@@ -62,6 +62,7 @@ const config: Config = {
           label: 'Tutorial',
         },
       ],
+
     },
     footer: {
       style: 'dark',

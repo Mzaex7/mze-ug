@@ -3,13 +3,25 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import Button from './button';
+import { Hero, ImageAndText, CtaCards, TextCards, FeatureShowcase, CtaImageButton, icons } from '@infinum/docusaurus-theme';
+
 
 export default function Home(): JSX.Element {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
 
   const scrollToFirstText = () => {
-    document.getElementById('first-text').scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById('first-text');
+    const offset = -100; // Adjust this value to your needs
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = element.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition + offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
   };
 
   return (
@@ -20,11 +32,14 @@ export default function Home(): JSX.Element {
       wrapperClassName='es-footer-white'
     >
       <div className={styles.hero}>
-        <h1 className={`${styles.title} padding-left-180`}>
-          Mark Zeitler
-          <br />
-          Engineering UG
-        </h1>
+        <div className={`${styles.titleContainer} padding-left-180`}>
+          <h1 className={styles.title}>
+            Mark Zeitler
+            <br />
+            Engineering UG
+          </h1>
+          <img src="/img/w-logo.svg" alt="Logo" className={styles.titleImage} />
+        </div>
         <Button onClick={scrollToFirstText} /> {/* Übergebe die scrollToFirstText-Funktion als onClick-Prop */}
         <p className={`${styles.subtitle} padding-left-180`} id="first-text">
           Die Mark Zeitler Engineering UG (haftungsbeschränkt) ist ein Service- und Beratungsunternehmen

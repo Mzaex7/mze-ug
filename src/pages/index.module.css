@@ -50,3 +50,18 @@
   margin-top: 10px;
   padding-left: 20px;
 }
+
+/* index.module.css */
+.titleContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.titleImage {
+  position: absolute;
+  right: -20px; /* Passe den Abstand nach Bedarf an */
+  top: 0;
+  height: 50px; /* Passe die Höhe nach Bedarf an */
+  z-index: -1; /* Damit das Bild hinter dem Text liegt */
+}

@@ -64,7 +64,7 @@ const config: Config = {
         {
           position: 'right',
           label: 'Referenzen',
-          to: '/Referenzen',
+          to: '/Referenzen/Referenzen',
         },
         {
           position: 'right',

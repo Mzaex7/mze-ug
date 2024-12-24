@@ -1,54 +1,27 @@
 /* Referenzen.module.css */
-body {
+.referenzen-body {
     margin: 0;
     font-family: sans-serif;
     height: 100vh; /* Stelle sicher, dass der Body den gesamten Viewport einnimmt */
 }
 
-* {
+.referenzen * {
     box-sizing: border-box;
 }
 
-.titel h1 {
+.referenzen h1 {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+.referenzen p {
     font-family: sans-serif;
     text-align: center;
 }
 
-.titel p {
-    font-family: sans-serif;
-    text-align: center;
-}
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Der Container nimmt die volle Höhe des Viewports ein */
-}
-
-.button-container a {
-    text-decoration: none; /* Entfernt die Unterstreichung des Links */
-}
-
-button {
-    width: 310px;
-    height: 60px;
-    border: 3px solid #479dc1;
-    border-radius: 0.9em;
-    transition: all 0.3s;
-    cursor: pointer;
-    background: white;
-    font-size: 1em;
-    font-weight: 550;
-}
-
-button:hover {
-    background: #479dc1;
-    color: white;
-    font-size: 1.2em;
-}
-
-.world.map {
+.referenzen .world.map {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
@@ -56,13 +29,13 @@ button:hover {
     position: relative;
 }
 
-.world.map img {
+.referenzen .world.map img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.pin {
+.referenzen .pin {
     background: #479dc1;
     position: absolute;
     width: 0.7em;
@@ -70,7 +43,7 @@ button:hover {
     border-radius: 50%;
 }
 
-.pin::before {
+.referenzen .pin::before {
     content: '';
     background: #479dc1;
     position: absolute;
@@ -83,7 +56,7 @@ button:hover {
     animation: pulse 1.3s ease-in-out infinite;
 }
 
-.pin span {
+.referenzen .pin span {
     display: inline-block;
     white-space: normal;
     position: absolute;
@@ -104,26 +77,26 @@ button:hover {
     word-wrap: break-word;
 }
 
-.pin:hover span {
+.referenzen .pin:hover span {
     opacity: 1;
 }
 
-.Deutschland {
+.referenzen .Deutschland {
     top: 41%;
     left: 49%;
 }
 
-.Saudi {
+.referenzen .Saudi {
     top: 52%;
     left: 58%;
 }
 
-.Indien {
+.referenzen .Indien {
     top: 54%;
     left: 68%;
 }
 
-.Thailand {
+.referenzen .Thailand {
     top: 55%;
     left: 73.5%;
 }
@@ -136,11 +109,16 @@ button:hover {
 }
 
 @media screen and (max-width: 600px) {
-    .world.map {
+    .referenzen .world.map {
         font-size: 13px;
     }
-    .pin span {
+    .referenzen .pin span {
         padding: 0.4em 1em;
         font-size: 0.6em;
     }
+}
+
+.referenzen .buttonContainer {
+    display: flex;
+    justify-content: center;
 }

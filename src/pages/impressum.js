@@ -10,10 +10,11 @@ export default function Impressum() {
           Die folgenden Angaben gelten für die Geschäftsaktivitäten der Mark Zeitler Engineering UG
           (haftungsbeschränkt):
         </p>
-        <hr style={{ margin: '50px 0' }} />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '50px' }}>
+        <hr style={{ margin: '15px 0' }} />
+        <p style={{ margin: "70px" }}/>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginLeft: "70px" }}>
           <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Mark Zeitler Engineering UG</h2>
+            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Mark Zeitler <br /> Engineering UG</h2>
             <p style={{ margin: 0 }}>Schumannstr. 15</p>
             <p style={{ margin: 0 }}>16359 Biesenthal</p>
             <p style={{ margin: 0 }}>

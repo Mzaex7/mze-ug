@@ -37,8 +37,7 @@ const StyledWrapper = styled.div`
     height: 2.8em;
     padding-right: 3.3em;
     cursor: pointer;
-    margin-left: 180px;
-    margin-bottom: 950px;
+    margin-left: 3px;
   }
 
   .cssbuttons-io-button .icon {

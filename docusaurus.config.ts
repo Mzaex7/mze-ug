@@ -59,8 +59,19 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'right',
-          label: 'Tutorial',
+          label: 'Leistungen',
         },
+        {
+          position: 'right',
+          label: 'Referenzen',
+          to: '/Referenzen',
+        },
+        {
+          position: 'right',
+          label: 'Impressum',
+          to: '/impressum',
+        },
+        
       ],
 
     },
@@ -96,10 +107,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/facebook/docusaurus',

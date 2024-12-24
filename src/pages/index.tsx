@@ -3,8 +3,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import Button from './button';
-import { Hero, ImageAndText, CtaCards, TextCards, FeatureShowcase, CtaImageButton, icons } from '@infinum/docusaurus-theme';
-
 
 export default function Home(): JSX.Element {
   const context = useDocusaurusContext();
@@ -32,33 +30,36 @@ export default function Home(): JSX.Element {
       wrapperClassName='es-footer-white'
     >
       <div className={styles.hero}>
-        <div className={`${styles.titleContainer} padding-left-180`}>
-          <h1 className={styles.title}>
-            Mark Zeitler
-            <br />
-            Engineering UG
-          </h1>
-          <img src="/img/w-logo.svg" alt="Logo" className={styles.titleImage} />
+        <div className={styles.titleContainer}>
+          <div className={styles.titleTextContainer}>
+            <h1 className={styles.title}>
+              Mark Zeitler
+              <br />
+              Engineering UG
+            </h1>
+            <div className={styles.buttonContainer}>
+              <Button onClick={scrollToFirstText} /> {/* Übergebe die scrollToFirstText-Funktion als onClick-Prop */}
+            </div>
+          </div>
         </div>
-        <Button onClick={scrollToFirstText} /> {/* Übergebe die scrollToFirstText-Funktion als onClick-Prop */}
-        <p className={`${styles.subtitle} padding-left-180`} id="first-text">
-          Die Mark Zeitler Engineering UG (haftungsbeschränkt) ist ein Service- und Beratungsunternehmen
-          für Engineering-Leistungen der Elektrotechnik / Leittechnik
-        </p>
-        <p className={`${styles.tagline} padding-left-180`}>
-          erfahren, zuverlässig, flexibel und effizient
-        </p>
-        <p className={`${styles.services} padding-left-180`}>
-          PROGRAMMIERUNG * REPARATUR * WARTUNG * INBETRIEBNAHME * ANLAGENOPTIMIERUNG
-        </p>
-        <p className={`${styles.description} padding-left-180`}>
-          Ich berate und unterstütze herstellerunabhängig meine Kunden bei der Planung und Umsetzung von
-          Elektro- und MSR-technischen Aufgabenstellungen.
-        </p>
-        <p className={`${styles.description} padding-left-180`}>
-          Im Vordergrund steht die durchgängige Unterstützung in allen Phasen eines Projektes.
-        </p>
-        <h2 className={`${styles.sectionTitle} padding-left-180`}>Die Betätigungsfelder sind insbesondere:</h2>
+        <div className={styles.contentContainer}>
+        <div className={styles.adjectiveBlock}>
+            <p className={`${styles.adjective1} padding-left-180`}>erfahren</p>
+            <p className={`${styles.adjective2} padding-left-180`}>zuverlässig</p>
+            <p className={`${styles.adjective3} padding-left-180`}>flexibel</p>
+            <p className={`${styles.adjective4} padding-left-180`}>effizient</p>
+          </div>
+          <div className={styles.contentText}>
+            <p className={styles.subtitle} id="first-text">
+              Über uns
+            </p>
+            <p>
+              Mark Zeitler Engineering ist ein Service- und Beratungsunternehmen, das sich auf Engineering-Leistungen in der Elektrotechnik und Leittechnik spezialisiert hat.
+              Mit einer langjährigen Erfahrung und einem hohen Maß an Flexibilität bieten wir unseren Kunden maßgeschneiderte Lösungen in allen Phasen von Projekten – <br/> von der Planung bis zur Umsetzung.
+            </p>
+          </div>
+        </div>
+        <h2 className={`${styles.sectionTitle} padding-left-180`}>Dienstleistungen:</h2>
         <ul className={`${styles.list} padding-left-180`}>
           <li>Sicherheitstechnische Prüfungen und Brennereinstellungen von Feuerungsanlagen (thermische Abgasreinigungen, Dampf- und Heißwassererzeuger und Sonderofenbau)</li>
           <li>Störungsbeseitigung in Elektro- und MSR-Anlagen (bis 1kV), Feuerungsanlagen</li>

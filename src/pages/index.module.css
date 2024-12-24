@@ -1,34 +1,20 @@
-/* src/css/custom.css */
-.padding-left-180 {
-  padding-left: 180px;
-}
-
 .hero {
-  padding: 4rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
 }
 
 .title {
-  font-size: 100px;
-}
+  font: 90px "Neue Haa Grotesk Pro", sans-serif;
+  font-weight: bold;
 
+}
 
 .subtitle {
-  font-size: 24px;
-  margin: 20px 0;
-}
-
-.tagline {
-  font-size: 20px;
+  font-size: 62px;
   font-weight: bold;
-  margin: 20px 0;
-}
-
-.services {
-  font-size: 18px;
-  margin: 20px 0;
+  font: sans-serif;
+  margin-bottom: 0px;
 }
 
 .description {
@@ -38,12 +24,13 @@
 
 .sectionTitle {
   font-size: 28px;
-  margin: 40px 0 20px 0;
 }
 
 .list {
   font-size: 16px;
   margin: 20px 0;
+  margin-left: 14px;
+  margin-bottom: 10%;
 }
 
 .list ul {
@@ -55,13 +42,92 @@
 .titleContainer {
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  background: url('/img/w-logo.svg') no-repeat right center;
+  background-size: contain; /* Passe die Größe nach Bedarf an */
+  height: 100vh; /* Höhe auf die volle Höhe des Viewports setzen */
+  max-height: 420px; /* Maximale Höhe auf 420px setzen */
+  width: calc(100% - 126px); /* Breite anpassen, um den linken Abstand zu berücksichtigen */
+  margin-left: 126px;
+  margin-top: 3em;
+  margin-bottom: calc(100vh - 420px - 100px); /* Berechne den Abstand nach unten (volle Höhe des Viewports - Höhe des Containers - Höhe der Navbar) */
 }
 
-.titleImage {
-  position: absolute;
-  right: -20px; /* Passe den Abstand nach Bedarf an */
-  top: 0;
-  height: 50px; /* Passe die Höhe nach Bedarf an */
-  z-index: -1; /* Damit das Bild hinter dem Text liegt */
+.titleTextContainer {
+  position: relative;
+  z-index: 1; /* Damit der Text und der Button vor dem Hintergrundbild liegen */
+}
+
+.title {
+  margin-top: 30px;
+}
+
+.buttonContainer {
+  margin-top: 10px; /* Passe den Abstand nach Bedarf an */
+}
+
+/* Media Query für kleinere Bildschirme */
+@media (max-width: 768px) {
+  .titleContainer {
+    margin-bottom: 50vh; /* Passe den Abstand nach unten für kleinere Bildschirme an */
+  }
+}
+
+
+/* index.module.css */
+.contentContainer {
+  display: flex;
+  align-items: flex-start; /* Stelle sicher, dass die Elemente oben beginnen */
+  justify-content: space-between;
+  margin-top: 20px;
+  height: 100%; /* Setze die Höhe auf 100% */
+  margin-bottom: 50vh;
+}
+
+.adjectiveBlock {
+  margin-top: 2%;
+  position: relative;
+  width: 50%; /* Passe die Breite des Textblocks nach Bedarf an */
+  height: 100%; /* Setze die Höhe auf 100% */
+  color: #479dc1; /* Setze die Textfarbe auf Blau */
+  font-size: 40px; /* Verwende relative Einheiten für die Schriftgröße */
+  font-weight: bold;
+  font-family: sans-serif;
+  line-height: 1.8; /* Setze den Zeilenabstand */
+}
+
+.adjectiveBlock p {
+  position: relative;
+  margin: 0;
+}
+
+.adjective1 {
+  left: 0;
+}
+
+.adjective2 {
+  left: 15%;
+}
+
+.adjective3 {
+  left: 30%;
+}
+
+.adjective4 {
+  left: 45%;
+}
+
+.contentText {
+  width: 50%; /* Passe die Breite des Textes nach Bedarf an */
+  font-size: 20px;
+  font: sans-serif;
+  margin-top: 0;
+}
+
+/* Media Query für kleinere Bildschirme */
+@media (max-width: 768px) {
+  .titleContainer {
+    margin-bottom: 50vh; /* Passe den Abstand nach unten für kleinere Bildschirme an */
+  }
 }

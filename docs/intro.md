@@ -6,15 +6,15 @@ sidebar_position: 1
 
 Wir bieten eine Vielzahl von Dienstleistungen an, um Ihre technischen Anforderungen zu erfüllen:
 
-## [Programmierung](./programmierung)
+## [Programmierung](./Programmierung)
 - Entwicklung und Implementierung maßgeschneiderter Softwarelösungen
 ## [Anlagenoptimierung](./Anlagenoptimierung)
 - Effizienzsteigerung und Leistungsverbesserung Ihrer Anlagen
-## [Inbetriebnahme](Inbetriebnahme)
+## [Inbetriebnahme](./Inbetriebnahme)
 - Fachgerechte Installation und Inbetriebnahme von Systemen und Anlagen
-## [Reparatur](Reparatur)
+## [Reparatur](./Reparatur)
 - Zuverlässige und schnelle Reparaturdienste für Ihre Geräte und Systeme
-## [Wartung](Wartung)
+## [Wartung](./Wartung)
 - Regelmäßige Wartung zur Sicherstellung der Langlebigkeit und Zuverlässigkeit Ihrer Anlagen
-## [Allgemeines](.) 
+## [Allgemeines](./Allgemeines) 
 - Umfassende Beratung und Unterstützung in allen technischen Belangen

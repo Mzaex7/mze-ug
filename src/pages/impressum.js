@@ -14,7 +14,7 @@ export default function Impressum() {
         <p style={{ margin: "70px" }}/>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginLeft: "70px" }}>
           <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Mark Zeitler <br /> Engineering UG</h2>
+            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Mark Peer Zeitler <br /> Engineering UG</h2>
             <p style={{ margin: 0 }}>Schumannstr. 15</p>
             <p style={{ margin: 0 }}>16359 Biesenthal</p>
             <p style={{ margin: 0 }}>
@@ -23,7 +23,7 @@ export default function Impressum() {
           </div>
           <div>
             <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Kontakt:</h2>
-            <p style={{ margin: 0 }}>Telefon: +49 30 12345678</p>
+            <p style={{ margin: 0 }}>Telefon: +49 172 3833590</p>
           </div>
           <div>
             <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Geschäftsführer:</h2>
@@ -32,15 +32,12 @@ export default function Impressum() {
           <div>
             <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Sitz der Gesellschaft:</h2>
             <p style={{ margin: 0 }}>Biesenthal</p>
-            <p style={{ margin: 0 }}>Amtsgericht Frankfurt (Oder) HRB 12527 FF</p>
+            <p style={{ margin: 0 }}>Amtsgericht Frankfurt (Oder)</p>
+            <p style={{ margin: 0 }}>HRB 12527 FF</p>
           </div>
           <div>
             <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Umsatzsteuer-ID:</h2>
-            <p style={{ margin: 0 }}>DE123456789</p>
-          </div>
-          <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Registrierungsnummer EAR:</h2>
-            <p style={{ margin: 0 }}>WEEE-Reg.-Nr. DE 987654321</p>
+            <p style={{ margin: 0 }}>DE265935486</p>
           </div>
         </div>
       </div>

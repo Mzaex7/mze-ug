@@ -80,9 +80,6 @@ export default function Referenzen() {
               <br />
             </span>
           </div>
-          <div className={styles.buttonContainer}>
-          <Button1 onClick={navigateToZielseite} /> {/* Übergebe die scrollToFirstText-Funktion als onClick-Prop */}          
-          </div>
         </div>
       </div>
     </Layout>

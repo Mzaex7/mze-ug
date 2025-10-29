@@ -182,7 +182,7 @@ export default function Home(): JSX.Element {
             Profitieren Sie von unserer langjährigen Erfahrung und internationalen Expertise.
           </p>
           <div className={styles.heroButtons}>
-            <Link className={styles.primaryButton} to="/impressum">
+            <Link className={styles.primaryButton} to="/kontakt">
               Kontakt aufnehmen
             </Link>
           </div>

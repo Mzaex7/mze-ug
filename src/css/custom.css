@@ -20,6 +20,21 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   
+  /* Custom Design Variables */
+  --gradient-primary: linear-gradient(135deg, #479dc1 0%, #6bbfe3 100%);
+  --gradient-secondary: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  --shadow-sm: 0 2px 8px rgba(71, 157, 193, 0.1);
+  --shadow-md: 0 4px 16px rgba(71, 157, 193, 0.15);
+  --shadow-lg: 0 8px 32px rgba(71, 157, 193, 0.2);
+  --shadow-xl: 0 12px 48px rgba(71, 157, 193, 0.25);
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+  
   /* Verbesserte Grau/Schwarztöne wie PYSolutions */
   --ifm-background-color: #0a0a0a;
   --ifm-background-surface-color: #111111;
@@ -40,6 +55,12 @@
   --ifm-color-primary-lighter: #7dc7e7;
   --ifm-color-primary-lightest: #a1d7ef;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Dark mode shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 12px 48px rgba(0, 0, 0, 0.6);
   
   /* Verbesserte Grau/Schwarztöne für Dark Mode */
   --ifm-background-color: #0a0a0a;

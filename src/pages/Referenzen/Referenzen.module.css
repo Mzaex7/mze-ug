@@ -1,0 +1,213 @@
+/* Referenzen Page Styles - basierend auf Index-Styles */
+
+.container {
+  padding: 5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #479dc1 0%, #6bbfe3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #999999;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.note {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.countryCard {
+  background: linear-gradient(135deg, rgba(17, 17, 17, 0.6) 0%, rgba(20, 20, 20, 0.4) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.countryCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(71, 157, 193, 0.2), rgba(107, 191, 227, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.countryCard:hover::before {
+  opacity: 1;
+}
+
+.countryCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(71, 157, 193, 0.4);
+  background: linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(20, 20, 20, 0.8) 100%);
+  box-shadow: 0 10px 40px rgba(71, 157, 193, 0.15);
+}
+
+.countryHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2px solid rgba(71, 157, 193, 0.2);
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+.countryName {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #479dc1;
+  margin: 0;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.projectCard {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, rgba(71, 157, 193, 0.08) 0%, rgba(107, 191, 227, 0.08) 100%);
+  border-radius: 12px;
+  border-left: 3px solid #479dc1;
+  transition: all 0.25s ease;
+}
+
+.projectCard:hover {
+  transform: translateX(8px);
+  background: linear-gradient(135deg, rgba(71, 157, 193, 0.15) 0%, rgba(107, 191, 227, 0.15) 100%);
+  border-left-color: #6bbfe3;
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.projectTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.projectDate {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  background: rgba(71, 157, 193, 0.2);
+  border-radius: 20px;
+}
+
+.projectDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #999999;
+  margin: 0;
+}
+
+.footer {
+  margin-top: 5rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(17, 17, 17, 0.6) 0%, rgba(20, 20, 20, 0.4) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.footerTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #479dc1;
+  margin-bottom: 1rem;
+}
+
+.footerText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #999999;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 996px) {
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .countryName {
+    font-size: 1.5rem;
+  }
+}

@@ -1,84 +1,193 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 import styles from './index.module.css';
-import Button from './button';
 
 export default function Home(): JSX.Element {
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
+  const { siteConfig } = useDocusaurusContext();
 
-  const scrollToFirstText = () => {
-    const element = document.getElementById('first-text');
-    const offset = -100; // Adjust this value to your needs
-    const bodyRect = document.body.getBoundingClientRect().top;
-    const elementRect = element.getBoundingClientRect().top;
-    const elementPosition = elementRect - bodyRect;
-    const offsetPosition = elementPosition + offset;
+  // OPTIMIERTER Scroll-Effekt - startet früher!
+  useEffect(() => {
+    const observerRef = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.scrollFadeIn);
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
+    );
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth'
+    document.querySelectorAll(`.${styles.section}, .${styles.serviceCard}, .${styles.stat}, .${styles.referenceCard}, .${styles.ctaSection}`).forEach((el) => {
+      observerRef.observe(el);
     });
-  };
+
+    return () => observerRef.disconnect();
+  }, []);
+
+  const services = [
+    {
+      icon: (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v6m0 6v6m5.2-14.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H1m14.2 5.2l-4.2-4.2m0-6l-4.2-4.2"/>
+        </svg>
+      ),
+      title: 'SPS-Programmierung',
+      description: 'Professionelle Programmierung von S7, TIA Portal und Siemens-Steuerungen für Ihre Automatisierungsprojekte.'
+    },
+    {
+      icon: (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v6m0 6v6m5.2-14.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H1m14.2 5.2l-4.2-4.2m0-6l-4.2-4.2"/>
+        </svg>
+      ),
+      title: 'Inbetriebnahme',
+      description: 'Weltweite Inbetriebnahme und Optimierung von Automatisierungsanlagen mit langjähriger Erfahrung.'
+    },
+    {
+      icon: (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M12 1v6m0 6v6m5.2-14.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H1m14.2 5.2l-4.2-4.2m0-6l-4.2-4.2"/>
+        </svg>
+      ),
+      title: 'Optimierung',
+      description: 'Analyse und Optimierung bestehender Anlagen für höhere Effizienz und Produktivität.'
+    }
+  ];
+
+  const references = [
+    {
+      title: '🇩🇪 Deutschland',
+      description: 'Zahlreiche Projekte in der Automatisierungstechnik und Prozessoptimierung'
+    },
+    {
+      title: '🇸🇦 Saudi-Arabien',
+      description: 'Internationale Großprojekte in der Industrie-Automation'
+    },
+    {
+      title: '🇮🇳 Indien & 🇹🇭 Thailand',
+      description: 'Erfolgreiche Inbetriebnahmen in Asien'
+    }
+  ];
 
   return (
     <Layout
       title={siteConfig.title}
-      description={siteConfig.tagline}
-      keywords={siteConfig.customFields.keywords}
-      wrapperClassName='es-footer-white'
+      description="Professionelle SPS-Programmierung und Automatisierungstechnik"
     >
-      <div className={styles.hero}>
-        <div className={styles.titleContainer}>
-          <div className={styles.titleTextContainer}>
-            <h1 className={styles.title}>
-              Mark Zeitler
-              <br />
-              Engineering UG
-            </h1>
-            <div className={styles.buttonContainer}>
-              <Button onClick={scrollToFirstText} /> {/* Übergebe die scrollToFirstText-Funktion als onClick-Prop */}
+      {/* Hero Section */}
+      <header className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
+            <span className={styles.heroGradient}>Automatisierungstechnik</span>
+            <span className={styles.heroSecondLine}>für höchste Ansprüche</span>
+          </h1>
+          <p className={styles.heroSubtitle}>
+            Professionelle SPS-Programmierung und weltweite Inbetriebnahme
+          </p>
+          <div className={styles.heroButtons}>
+            <Link className={styles.primaryButton} to="/docs/intro">
+              Unsere Leistungen
+            </Link>
+            <Link className={styles.secondaryButton} to="/Referenzen/Referenzen">
+              Referenzen ansehen
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      {/* Services Section */}
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Unsere Expertise</h2>
+        <div className={styles.servicesGrid}>
+          {services.map((service, idx) => (
+            <div key={idx} className={styles.serviceCard}>
+              <div className={styles.serviceIcon}>{service.icon}</div>
+              <h3 className={styles.serviceTitle}>{service.title}</h3>
+              <p className={styles.serviceDescription}>{service.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className={styles.sectionLink}>
+          <Link className={styles.linkButton} to="/docs/intro">
+            Alle Leistungen ansehen →
+          </Link>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className={styles.section}>
+        <div className={styles.aboutSection}>
+          <div className={styles.aboutTitleWrapper}>
+            <h2 className={styles.aboutSectionTitle}>Erfahrung trifft Innovation</h2>
+            <div className={styles.aboutContent}>
+              <p>
+                Mark Zeitler Engineering UG ist Ihr zuverlässiger Partner für anspruchsvolle Automatisierungsprojekte. 
+                Mit über 15 Jahren Erfahrung in der SPS-Programmierung und Inbetriebnahme setzen wir Ihre Projekte 
+                weltweit professionell um.
+              </p>
+              <p>
+                Von der Konzeption über die Programmierung bis zur Inbetriebnahme und Optimierung – 
+                wir begleiten Sie durch alle Projektphasen und sorgen für nachhaltige Lösungen.
+              </p>
+            </div>
+          </div>
+          <div className={styles.statsGrid}>
+            <div className={styles.stat}>
+              <div className={styles.statNumber}>15+</div>
+              <div className={styles.statLabel}>Jahre Erfahrung</div>
+            </div>
+            <div className={styles.stat}>
+              <div className={styles.statNumber}>100+</div>
+              <div className={styles.statLabel}>Projekte</div>
+            </div>
+            <div className={styles.stat}>
+              <div className={styles.statNumber}>4</div>
+              <div className={styles.statLabel}>Länder</div>
             </div>
           </div>
         </div>
-        <div className={styles.contentContainer}>
-        <div className={styles.adjectiveBlock}>
-            <p className={`${styles.adjective1} padding-left-180`}>erfahren</p>
-            <p className={`${styles.adjective2} padding-left-180`}>zuverlässig</p>
-            <p className={`${styles.adjective3} padding-left-180`}>flexibel</p>
-            <p className={`${styles.adjective4} padding-left-180`}>effizient</p>
-          </div>
-          <div className={styles.contentText}>
-            <p className={styles.subtitle} id="first-text">
-              Über uns
-            </p>
-            <p>
-              Mark Zeitler Engineering ist ein Service- und Beratungsunternehmen, das sich auf Engineering-Leistungen in der Elektrotechnik und Leittechnik spezialisiert hat.
-              Mit einer langjährigen Erfahrung und einem hohen Maß an Flexibilität bieten wir unseren Kunden maßgeschneiderte Lösungen in allen Phasen von Projekten – <br/> von der Planung bis zur Umsetzung.
-            </p>
+      </section>
+
+      {/* References Preview */}
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Internationale Referenzen</h2>
+        <div className={styles.referencesGrid}>
+          {references.map((ref, idx) => (
+            <div key={idx} className={styles.referenceCard}>
+              <h3 className={styles.referenceTitle}>{ref.title}</h3>
+              <p className={styles.referenceDescription}>{ref.description}</p>
+            </div>
+          ))}
+        </div>
+        <div className={styles.sectionLink}>
+          <Link className={styles.linkButton} to="/Referenzen/Referenzen">
+            Alle Referenzen ansehen →
+          </Link>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className={styles.ctaSection}>
+        <div className={styles.ctaContent}>
+          <h2 className={styles.ctaTitle}>Bereit für Ihr nächstes Projekt?</h2>
+          <p className={styles.ctaDescription}>
+            Lassen Sie uns gemeinsam Ihre Automatisierung voranbringen. Ob Neuprojekt, Optimierung oder 
+            Modernisierung – wir analysieren Ihre Anforderungen und entwickeln maßgeschneiderte Lösungen. 
+            Profitieren Sie von unserer langjährigen Erfahrung und internationalen Expertise.
+          </p>
+          <div className={styles.heroButtons}>
+            <Link className={styles.primaryButton} to="/impressum">
+              Kontakt aufnehmen
+            </Link>
           </div>
         </div>
-        <h2 className={`${styles.sectionTitle} padding-left-180`}>Dienstleistungen:</h2>
-        <ul className={`${styles.list} padding-left-180`}>
-          <li>Sicherheitstechnische Prüfungen und Brennereinstellungen von Feuerungsanlagen (thermische Abgasreinigungen, Dampf- und Heißwassererzeuger und Sonderofenbau)</li>
-          <li>Störungsbeseitigung in Elektro- und MSR-Anlagen (bis 1kV), Feuerungsanlagen</li>
-          <li>Projektierung, Programmierung und Inbetriebnahme von:</li>
-          <ul>
-            <li>S5- und S7 Steuerungen mit Profibus- und Ethernetanbindung (Thermische Abgasreinigungsanlagen / Feuerungsanlagen in der chemischen Industrie; Produktions- und Fördertechnikanlagen in der Automobilindustrie; Prüföfen/Sonderofenbau)</li>
-            <li>Hima-Steuerungen mittels Elop II NT/XP und Elop II Factory</li>
-            <li>Reglern diverser Hersteller (Siemens, H&B, ABB, PMA, Phillips, K&P, Mytec und Lamtec)</li>
-            <li>Schneider Steuerungen (Concept)</li>
-            <li>Visualisierungssystemen Intouch (Wonderware), WINCC (Siemens), Wizcon Supervisor (Emation)</li>
-            <li>Siemens Operator- / Touch- und Multipanels mit Protool oder Wincc Flex.</li>
-            <li>Meßdatenerfassungssystem / Visualisierung – PMA’s MSI-WPCI</li>
-            <li>Frequenzumrichtern div. Hersteller</li>
-          </ul>
-          <li>Fernwartung (z.B. pcAnywhere, VNC und Teleservice)</li>
-          <li>Projektierung, Montage und Inbetriebnahme von Automatisierungsanlagen</li>
-          <li>Aufbau, Installation, Sicherung und Konfiguration von PC-Systemen inkl. Netzwerk</li>
-        </ul>
-      </div>
+      </section>
     </Layout>
   );
 }

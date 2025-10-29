@@ -87,27 +87,21 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Rechtliches',
-          to: '/impressum',
-          items: [
-            {
-              label: 'Impressum',
-              to: '/impressum',
-            },
-            {
-              label: 'Datenschutz',
-              to: '/datenschutz',
-            },
-            {
-              label: 'AGB',
-              to: '/agb',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Made with ❤️ by Max and Lena`,
+      links: [],
+      copyright: `
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+          <div style="color: #999999; font-size: 0.95rem;">
+            Copyright © ${new Date().getFullYear()} Made with ❤️ by Max and Lena
+          </div>
+          <div style="display: flex; gap: 1.5rem; align-items: center;">
+            <a href="/impressum" class="footer-legal-link">Impressum</a>
+            <span style="color: #333333;">•</span>
+            <a href="/datenschutz" class="footer-legal-link">Datenschutz</a>
+            <span style="color: #333333;">•</span>
+            <a href="/agb" class="footer-legal-link">AGB</a>
+          </div>
+        </div>
+      `,
     },
     prism: {
       theme: prismThemes.github,

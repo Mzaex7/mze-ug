@@ -121,12 +121,12 @@ html {
   border-bottom: none;
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
-  background: rgba(10, 10, 10, 0.95) !important;
+  background: rgba(17, 17, 17, 0.95) !important;
   transition: var(--transition-normal);
 }
 
 .navbar--dark {
-  background: rgba(10, 10, 10, 0.95) !important;
+  background: rgba(17, 17, 17, 0.95) !important;
 }
 
 /* Remove borders globally but keep shadows */

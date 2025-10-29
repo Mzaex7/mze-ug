@@ -441,21 +441,21 @@
   color: #6bbfe3;
 }
 
-/* CTA Section - Wie im Beispielbild mit stärkerer Verdunklung */
+/* CTA Section - Bild links sichtbar, Content rechts */
 .ctaSection {
-  background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&fit=crop') center/cover;
+  background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=600&fit=crop') left center/cover;
   border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
   border-radius: 32px;
-  padding: 6rem 3rem;
+  padding: 4rem 3rem;
   margin: 4rem auto;
   max-width: 1400px;
-  text-align: center;
   position: relative;
   overflow: hidden;
-  min-height: 400px;
-  display: flex;
+  min-height: 450px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
+  gap: 3rem;
 }
 
 .ctaSection::before {
@@ -465,15 +465,16 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(5, 5, 5, 0.92) 0%, rgba(10, 10, 10, 0.88) 100%);
+  background: linear-gradient(90deg, rgba(5, 5, 5, 0.3) 0%, rgba(10, 10, 10, 0.95) 50%, rgba(10, 10, 10, 0.98) 100%);
   z-index: 0;
 }
 
 .ctaContent {
   position: relative;
   z-index: 1;
-  max-width: 900px;
-  margin: 0 auto;
+  grid-column: 2;
+  text-align: left;
+  padding-left: 2rem;
 }
 
 .ctaTitle {
@@ -488,6 +489,10 @@
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 2.5rem;
   line-height: 1.7;
+}
+
+.ctaContent .heroButtons {
+  justify-content: flex-start;
 }
 
 /* Responsive */
@@ -535,6 +540,18 @@
   .ctaSection {
     padding: 4rem 2rem;
     min-height: 350px;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .ctaContent {
+    grid-column: 1;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .ctaContent .heroButtons {
+    justify-content: center;
   }
 
   .ctaTitle {
@@ -575,5 +592,10 @@
   .ctaSection {
     padding: 3rem 1.5rem;
     min-height: 300px;
+    grid-template-columns: 1fr;
+  }
+
+  .ctaContent {
+    padding-left: 0;
   }
 }

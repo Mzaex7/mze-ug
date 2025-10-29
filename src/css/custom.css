@@ -153,15 +153,13 @@ html {
 .navbar__title {
   font-size: 2rem;
   font-weight: bold;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  transition: var(--transition-normal);
+  color: white !important;
+  transition: none;
 }
 
 .navbar__title:hover {
-  transform: scale(1.05);
+  transform: none;
+  color: white !important;
 }
 
 /* General animations */

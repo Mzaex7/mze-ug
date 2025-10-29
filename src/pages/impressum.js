@@ -2,6 +2,28 @@ import React from 'react';
 import Layout from '@theme/Layout';
 
 export default function Impressum() {
+  const boxStyle = {
+    padding: '30px',
+    background: 'linear-gradient(135deg, rgba(17, 17, 17, 0.6) 0%, rgba(20, 20, 20, 0.4) 100%)',
+    border: '1.5px solid rgba(255, 255, 255, 0.15)',
+    borderRadius: '20px',
+    transition: 'all 0.3s ease'
+  };
+
+  const handleMouseEnter = (e) => {
+    e.currentTarget.style.transform = 'translateY(-5px)';
+    e.currentTarget.style.borderColor = 'rgba(71, 157, 193, 0.4)';
+    e.currentTarget.style.background = 'linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(20, 20, 20, 0.8) 100%)';
+    e.currentTarget.style.boxShadow = '0 10px 40px rgba(71, 157, 193, 0.15)';
+  };
+
+  const handleMouseLeave = (e) => {
+    e.currentTarget.style.transform = 'translateY(0)';
+    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+    e.currentTarget.style.background = 'linear-gradient(135deg, rgba(17, 17, 17, 0.6) 0%, rgba(20, 20, 20, 0.4) 100%)';
+    e.currentTarget.style.boxShadow = 'none';
+  };
+
   return (
     <Layout>
       <div style={{ 
@@ -47,17 +69,7 @@ export default function Impressum() {
           gap: '40px', 
           marginTop: '60px'
         }}>
-          <div style={{
-            padding: '30px',
-            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
-            borderRadius: '16px',
-            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
-            transition: 'all 0.3s ease',
-            ':hover': {
-              transform: 'translateY(-5px)',
-              boxShadow: '0 8px 32px rgba(71, 157, 193, 0.2)'
-            }
-          }}>
+          <div style={boxStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <h2 style={{ 
               fontSize: '24px', 
               fontWeight: 'bold',
@@ -83,13 +95,7 @@ export default function Impressum() {
             </p>
           </div>
           
-          <div style={{
-            padding: '30px',
-            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
-            borderRadius: '16px',
-            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
-            transition: 'all 0.3s ease'
-          }}>
+          <div style={boxStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <h2 style={{ 
               fontSize: '24px', 
               fontWeight: 'bold',
@@ -106,13 +112,7 @@ export default function Impressum() {
             </p>
           </div>
           
-          <div style={{
-            padding: '30px',
-            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
-            borderRadius: '16px',
-            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
-            transition: 'all 0.3s ease'
-          }}>
+          <div style={boxStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <h2 style={{ 
               fontSize: '24px', 
               fontWeight: 'bold',
@@ -127,13 +127,7 @@ export default function Impressum() {
             <p style={{ margin: '10px 0', lineHeight: '1.8' }}>Mark Zeitler</p>
           </div>
           
-          <div style={{
-            padding: '30px',
-            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
-            borderRadius: '16px',
-            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
-            transition: 'all 0.3s ease'
-          }}>
+          <div style={boxStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <h2 style={{ 
               fontSize: '24px', 
               fontWeight: 'bold',
@@ -150,13 +144,7 @@ export default function Impressum() {
             <p style={{ margin: '10px 0', lineHeight: '1.8' }}>HRB 12527 FF</p>
           </div>
           
-          <div style={{
-            padding: '30px',
-            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
-            borderRadius: '16px',
-            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
-            transition: 'all 0.3s ease'
-          }}>
+          <div style={boxStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <h2 style={{ 
               fontSize: '24px', 
               fontWeight: 'bold',

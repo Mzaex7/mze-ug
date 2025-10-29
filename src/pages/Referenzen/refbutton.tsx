@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = ({ onClick }) => {
+const Button1 = ({ onClick }) => {
   return (
     <StyledWrapper>
       <button className="cssbuttons-io-button" onClick={onClick}>
-        Erfahre mehr!
+        Zurück zur Startseite
         <div className="icon">
           <svg height={24} width={24} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="none" />
@@ -37,7 +37,7 @@ const StyledWrapper = styled.div`
     height: 3.2em;
     padding-right: 3.5em;
     cursor: pointer;
-    margin-left: 3px;
+    margin: 40px auto;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -98,4 +98,4 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default Button;
+export default Button1;

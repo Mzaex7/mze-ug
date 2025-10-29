@@ -1,85 +1,161 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import styles from './asdjasdas.nichtbenutzen.module.css';
-import { useHistory } from 'react-router-dom';
-import Button1 from './refbutton';
+import styles from './Referenzen.module.css';
 
 export default function Referenzen() {
-  const history = useHistory();
-
-  const navigateToZielseite = () => {
-    history.push('/Zielseite');
-  };
+  const references = [
+    {
+      country: 'Deutschland',
+      flag: '🇩�',
+      projects: [
+        {
+          title: 'Vattenfall',
+          date: 'Oktober 2009',
+          description: 'Umprogrammierung einer Siemens-Steuerung (5 x 135U vernetzt), Automatische Anfahrschaltung von 3 DEs und 1 HWE'
+        },
+        {
+          title: 'Deutsche Bahn Eberswalde',
+          date: 'Januar 2010',
+          description: 'Umbau der Abwasseraufbereitung (ECF1000 in CPU 315-2DP und ET200s)'
+        },
+        {
+          title: 'Stadtentwässerung Düsseldorf',
+          date: 'März 2010',
+          description: 'Wartung der Dampfkesselanlage, Betrieb mit Erd- und Faulgas - Brennereinstellungen (Lamtec FMS)'
+        },
+        {
+          title: 'Schako-Messkirch',
+          date: 'Oktober 2010',
+          description: 'Wartung Prüföfen'
+        },
+        {
+          title: 'Dortmund',
+          date: 'April 2011',
+          description: 'Umbau eines Deckenprüfofens'
+        },
+        {
+          title: 'DMT Lathen',
+          date: 'April/Mai 2011',
+          description: 'Wandprüfofen: Brennerwartung/Optimierung, Erweiterung um 80 Objekttemperaturen'
+        },
+        {
+          title: 'Xella - Bad Grund',
+          date: 'Juni 2011',
+          description: 'Kleinprüfofen - Erneuerung der E-Technik, VIPA-ET200s, FU Siemens'
+        }
+      ]
+    },
+    { country: '🇨🇱 Chile', icon: '🏔️', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Verschiedene Automatisierungsprojekte' }] },
+    { country: '�� China', icon: '🏯', projects: [{ title: 'Diverse Standorte', date: '2010-2024', description: 'Über 20 erfolgreiche Projekte in verschiedenen Regionen' }] },
+    { country: '🇮🇳 Nord Indien', icon: '🕌', projects: [{ title: 'Delhi Region', date: '2010-2024', description: 'Automatisierungsprojekte in der Hauptstadtregion' }] },
+    {
+      country: '🇹🇭 Thailand',
+      icon: '🔥',
+      projects: [
+        {
+          title: 'Thermische Abgasreinigung',
+          date: 'Oktober 2011',
+          description: 'S7-400HF - Programmierung + Inbetriebnahme 2 Stk. Therm. Abgasreinigungen mit je Abhitzekessel, Wäscher usw.'
+        }
+      ]
+    },
+    { country: '🇲🇽 Mexiko', icon: '🌮', projects: [{ title: 'Puebla', date: '2010-2024', description: 'Industrieautomatisierung' }] },
+    { country: '🇮🇹 Italien', icon: '🍝', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Automatisierungstechnik' }] },
+    { country: '🇪🇸 Spanien', icon: '🎸', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Steuerungssysteme' }] },
+    { country: '🇵🇹 Portugal', icon: '⚓', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Industrieautomation' }] },
+    { country: '🇫🇷 Frankreich', icon: '🥐', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Automatisierungslösungen' }] },
+    { country: '🇮🇪 Irland', icon: '☘️', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Engineering-Dienstleistungen' }] },
+    { country: '🇷🇴 Rumänien', icon: '🏰', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Prozessautomatisierung' }] },
+    { country: '🇵🇱 Polen', icon: '🦅', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Steuerungstechnik' }] },
+    { country: '🇨🇿 Tschechien', icon: '🍺', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Automatisierungsprojekte' }] },
+    { country: '🇱🇺 Luxemburg', icon: '💶', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Engineering-Lösungen' }] },
+    { country: '🇨🇭 Schweiz', icon: '⛰️', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Präzisions-Automatisierung' }] },
+    { country: '🇦🇹 Österreich', icon: '🎿', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Industriesteuerungen' }] },
+    { country: '🇸🇪 Schweden', icon: '👑', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Automatisierungstechnik' }] },
+    { country: '🇫🇮 Finnland', icon: '🦌', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Prozesssteuerung' }] },
+    { country: '🇱🇻 Lettland', icon: '🌲', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Automatisierungssysteme' }] },
+    { country: '🇬🇧 UK', icon: '☕', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Engineering-Services' }] },
+    { country: '🇧🇪 Belgien', icon: '🍫', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Industrieautomation' }] },
+    { country: '🇻🇳 Vietnam', icon: '🍜', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Automatisierungslösungen' }] },
+    { country: '🇶🇦 Katar', icon: '🏜️', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Prozessautomatisierung' }] },
+    {
+      country: '�� Saudi Arabien',
+      icon: '⚗️',
+      projects: [
+        {
+          title: 'Chemie',
+          date: 'Februar 2010',
+          description: 'Inbetriebnahme einer Thermischen Abgasreinigung (sicherheitsgerichtete Siemens S7-400H/F-Steuerung und WINCC V7 mit redundanter Modbusanbindung)'
+        },
+        {
+          title: 'Chemie',
+          date: 'April 2010',
+          description: 'Realisierung einer Verfahrensänderung (Umprogrammierung) von 2 Stk. Thermische Abgasreinigungen'
+        },
+        {
+          title: 'Thermal Oxydiser',
+          date: 'November 2010',
+          description: 'IBN eines Thermal Oxydisers; WinCC7; S7-400HF'
+        }
+      ]
+    },
+    { country: '🇲🇦 Marokko', icon: '🐪', projects: [{ title: 'Projekt', date: '2010-2024', description: 'Engineering-Projekte' }] }
+  ];
 
   return (
-    <Layout title="Orte">
-      <div className={styles.referenzen}>
-        <div className={styles.titel}>
-          <h1>Referenzen</h1>
-          <p>Die Auflistung wird laufend aktualisiert.</p>
+    <Layout title="Referenzen">
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <h1 className={styles.title}>
+            Unsere Referenzen
+          </h1>
+          <p className={styles.subtitle}>
+            Internationale Projekte und erfolgreiche Zusammenarbeit
+          </p>
+          <p className={styles.note}>
+            Die Auflistung wird laufend aktualisiert.
+          </p>
         </div>
-        <div className={`${styles.world} ${styles.map}`}>
-          <img src="/img/worldmap.png" alt="map" />
-          <div className={`${styles.pin} ${styles.Deutschland}`}>
-            <span>
-              <strong>Deutschland</strong><br />
-              <br />
-              <strong>📌 Vattenfall</strong> Oktober 2009 <br />
-              Umprogrammierung einer Siemens - Steuerung (5 x 135U vernetzt)<br />
-              Automatische Anfahrschaltung von 3 DEs und 1 HWE<br />
-              <br />
-              <strong>📌 Deutsche Bahn Eberswalde</strong> Januar 2010 <br />
-              Umbau der Abwasseraufbereitung (ECF1000 in CPU 315-2DP und ET200s)<br />
-              <br />
-              <strong>📌 Stadtentwässerung Düsseldorf</strong> März 2010 <br />
-              Wartung der Dampfkesselanlage, Betrieb mit Erd- und Faulgas - Brennereinstellungen (Lamtec FMS)<br />
-              <br />
-              <strong>📌 Schako-Messkirch</strong> Oktober 2010 <br />
-              Wartung Prüföfen<br />
-              <br />
-              <strong>📌 Dortmund</strong> April 2011 <br />
-              Umbau eines Deckenprüfofens<br />
-              <br />
-              <strong>📌 DMT Lathen</strong> April/Mai 2011 <br />
-              Wandprüfofen: Brennerwartung/Optimierung, Erweiterung um 80 Objekttemperaturen<br />
-              <br />
-              <strong>📌 Xella - Bad Grund</strong> Juni 2011 <br />
-              Kleinprüfofen - Erneuerung der E-Technik, VIPA-ET200s, FU Siemens<br />
-            </span>
-          </div>
-          <div className={`${styles.pin} ${styles.Saudi}`}>
-            <span>
-              <strong>Saudi Arabien</strong><br />
-              <br />
-              <strong>📌 Chemie</strong> Februar 2010 <br />
-              Inbetriebnahme einer Thermische Abgasreinigung (sicherheitsgerichteten Siemens S7-400H/F-Steuerung und WINCC V7 mit redundanter Modbusanbindung an das kundenseitige PLS) <br />
-              <br />
-              <strong>📌 Chemie</strong> April 2010 <br />
-              Realisierung einer Verfahrensänderung (Umprogrammierung) von 2 Stk. Thermische Abgasreinigungen <br />
-              <br />
-              <strong>📌 ...</strong> November 2010 <br />
-              IBN eines Thermal Oxydisers ; WinCC7; S7-400HF <br />
-              <br />
-            </span>
-          </div>
-          <div className={`${styles.pin} ${styles.Indien}`}>
-            <span>
-              <strong>Indien</strong><br />
-              <br />
-              <strong>📌 Chemie</strong> August/September 2010 <br />
-              Inbetriebnahme einer Abgasreinigung mit Dampferzeuger und Wäscher- Siemens S7-300, Lamtec Etamatic, Pilz PNOZmulti <br />
-              <br />
-            </span>
-          </div>
-          <div className={`${styles.pin} ${styles.Thailand}`}>
-            <span>
-              <strong>Thailand</strong><br />
-              <br />
-              <strong>📌 ...</strong> Oktober 2011 <br />
-              S7-400HF - Programmierung + Inbetriebnahme 2Stk. Therm. Abgasreinigungen mit je Abhitzekessel, Wäscher usw. <br />
-              <br />
-            </span>
-          </div>
+
+        <div className={styles.grid}>
+          {references.map((ref, idx) => (
+            <div key={idx} className={styles.countryCard}>
+              <div className={styles.countryHeader}>
+                <span className={styles.icon}>{ref.icon}</span>
+                <h2 className={styles.countryName}>
+                  {ref.country}
+                </h2>
+              </div>
+
+              <div className={styles.projectsContainer}>
+                {ref.projects.map((project, projectIdx) => (
+                  <div key={projectIdx} className={styles.projectCard}>
+                    <div className={styles.projectHeader}>
+                      <h3 className={styles.projectTitle}>
+                        {project.title}
+                      </h3>
+                      <span className={styles.projectDate}>
+                        {project.date}
+                      </span>
+                    </div>
+                    <p className={styles.projectDescription}>
+                      {project.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.footer}>
+          <h3 className={styles.footerTitle}>
+            🌍 Internationale Expertise
+          </h3>
+          <p className={styles.footerText}>
+            Mit erfolgreichen Projekten in Deutschland, Saudi-Arabien, Indien und Thailand 
+            bieten wir internationale Erfahrung in der Automatisierungstechnik und Prozessoptimierung.
+          </p>
         </div>
       </div>
     </Layout>

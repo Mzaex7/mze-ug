@@ -48,6 +48,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: 'Mark Zeitler Engineering',
       logo: {
@@ -71,7 +76,12 @@ const config: Config = {
           label: 'Impressum',
           to: '/impressum',
         },
-        
+        {
+          to: '/kontakt',
+          label: 'Kontakt',
+          position: 'right',
+          className: 'navbar__item--kontakt'
+        },
       ],
 
     },
@@ -79,37 +89,20 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Rechtliches',
+          to: '/impressum',
           items: [
             {
-              label: 'Kontakt & Impressum',
+              label: 'Impressum',
               to: '/impressum',
             },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Datenschutz',
+              to: '/datenschutz',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/Mzaex7/mze-ug.git',
+              label: 'AGB',
+              to: '/agb',
             },
           ],
         },

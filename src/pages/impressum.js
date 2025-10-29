@@ -4,40 +4,171 @@ import Layout from '@theme/Layout';
 export default function Impressum() {
   return (
     <Layout>
-      <div style={{ margin: '50px auto', maxWidth: '1200px', fontSize: '20px' }}>
-        <h1 style={{ textAlign: 'center', fontSize: '40px', fontWeight: 'bold' }}>Impressum</h1>
-        <p style={{ textAlign: 'center', margin: 0 }}>
+      <div style={{ 
+        margin: '0 auto', 
+        maxWidth: '1200px', 
+        padding: '80px 40px',
+        fontSize: '18px',
+        animation: 'fadeIn 0.8s ease-out'
+      }}>
+        <h1 style={{ 
+          textAlign: 'center', 
+          fontSize: '48px', 
+          fontWeight: 'bold',
+          background: 'var(--gradient-primary)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          marginBottom: '20px'
+        }}>
+          Impressum
+        </h1>
+        <p style={{ 
+          textAlign: 'center', 
+          margin: '0 0 40px 0',
+          fontSize: '20px',
+          color: 'var(--ifm-color-emphasis-700)'
+        }}>
           Die folgenden Angaben gelten für die Geschäftsaktivitäten der Mark Zeitler Engineering UG
-          (haftungsbeschränkt):
+          (haftungsbeschränkt)
         </p>
-        <hr style={{ margin: '15px 0' }} />
-        <p style={{ margin: "70px" }}/>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', marginLeft: "70px" }}>
-          <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Mark Peer Zeitler <br /> Engineering UG</h2>
-            <p style={{ margin: 0 }}>Schumannstr. 15</p>
-            <p style={{ margin: 0 }}>16359 Biesenthal</p>
-            <p style={{ margin: 0 }}>
-              <a href="mailto:info@markzeitler.de">info@markzeitler.de</a>
+        <hr style={{ 
+          margin: '40px auto', 
+          maxWidth: '200px',
+          height: '3px',
+          background: 'var(--gradient-primary)',
+          border: 'none',
+          borderRadius: '2px'
+        }} />
+        
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+          gap: '40px', 
+          marginTop: '60px'
+        }}>
+          <div style={{
+            padding: '30px',
+            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
+            borderRadius: '16px',
+            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
+            transition: 'all 0.3s ease',
+            ':hover': {
+              transform: 'translateY(-5px)',
+              boxShadow: '0 8px 32px rgba(71, 157, 193, 0.2)'
+            }
+          }}>
+            <h2 style={{ 
+              fontSize: '24px', 
+              fontWeight: 'bold',
+              color: 'var(--ifm-color-primary)',
+              marginBottom: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              🏢 Mark Peer Zeitler Engineering UG
+            </h2>
+            <p style={{ margin: '10px 0', lineHeight: '1.8' }}>Schumannstr. 15</p>
+            <p style={{ margin: '10px 0', lineHeight: '1.8' }}>16359 Biesenthal</p>
+            <p style={{ margin: '10px 0', lineHeight: '1.8' }}>
+              <a href="mailto:info@markzeitler.de" style={{
+                color: 'var(--ifm-color-primary)',
+                textDecoration: 'none',
+                fontWeight: '500',
+                transition: 'color 0.2s'
+              }}>
+                📧 info@markzeitler.de
+              </a>
             </p>
           </div>
-          <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Kontakt:</h2>
-            <p style={{ margin: 0 }}>Telefon: +49 172 3833590</p>
+          
+          <div style={{
+            padding: '30px',
+            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
+            borderRadius: '16px',
+            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
+            transition: 'all 0.3s ease'
+          }}>
+            <h2 style={{ 
+              fontSize: '24px', 
+              fontWeight: 'bold',
+              color: 'var(--ifm-color-primary)',
+              marginBottom: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              📞 Kontakt
+            </h2>
+            <p style={{ margin: '10px 0', lineHeight: '1.8' }}>
+              Telefon: <strong>+49 172 3833590</strong>
+            </p>
           </div>
-          <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Geschäftsführer:</h2>
-            <p style={{ margin: 0 }}>Mark Zeitler</p>
+          
+          <div style={{
+            padding: '30px',
+            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
+            borderRadius: '16px',
+            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
+            transition: 'all 0.3s ease'
+          }}>
+            <h2 style={{ 
+              fontSize: '24px', 
+              fontWeight: 'bold',
+              color: 'var(--ifm-color-primary)',
+              marginBottom: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              👤 Geschäftsführer
+            </h2>
+            <p style={{ margin: '10px 0', lineHeight: '1.8' }}>Mark Zeitler</p>
           </div>
-          <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Sitz der Gesellschaft:</h2>
-            <p style={{ margin: 0 }}>Biesenthal</p>
-            <p style={{ margin: 0 }}>Amtsgericht Frankfurt (Oder)</p>
-            <p style={{ margin: 0 }}>HRB 12527 FF</p>
+          
+          <div style={{
+            padding: '30px',
+            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
+            borderRadius: '16px',
+            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
+            transition: 'all 0.3s ease'
+          }}>
+            <h2 style={{ 
+              fontSize: '24px', 
+              fontWeight: 'bold',
+              color: 'var(--ifm-color-primary)',
+              marginBottom: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              🏛️ Sitz der Gesellschaft
+            </h2>
+            <p style={{ margin: '10px 0', lineHeight: '1.8' }}>Biesenthal</p>
+            <p style={{ margin: '10px 0', lineHeight: '1.8' }}>Amtsgericht Frankfurt (Oder)</p>
+            <p style={{ margin: '10px 0', lineHeight: '1.8' }}>HRB 12527 FF</p>
           </div>
-          <div>
-            <h2 style={{ fontSize: '28px', fontWeight: 'bold' }}>Umsatzsteuer-ID:</h2>
-            <p style={{ margin: 0 }}>DE265935486</p>
+          
+          <div style={{
+            padding: '30px',
+            background: 'linear-gradient(135deg, rgba(71, 157, 193, 0.05) 0%, rgba(107, 191, 227, 0.05) 100%)',
+            borderRadius: '16px',
+            boxShadow: '0 4px 16px rgba(71, 157, 193, 0.15)',
+            transition: 'all 0.3s ease'
+          }}>
+            <h2 style={{ 
+              fontSize: '24px', 
+              fontWeight: 'bold',
+              color: 'var(--ifm-color-primary)',
+              marginBottom: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              💼 Umsatzsteuer-ID
+            </h2>
+            <p style={{ margin: '10px 0', lineHeight: '1.8' }}>DE265935486</p>
           </div>
         </div>
       </div>

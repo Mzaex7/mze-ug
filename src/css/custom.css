@@ -97,29 +97,23 @@ html {
 }
 
 .navbar__item:hover {
-  transform: translateY(-2px);
+  transform: none;
 }
 
 .navbar__link {
   position: relative;
   font-weight: 500;
   transition: var(--transition-fast);
+  color: white !important;
+}
+
+.navbar__link:hover {
+  color: #6bbfe3 !important;
+  text-decoration: none !important;
 }
 
 .navbar__link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 50%;
-  background: var(--gradient-primary);
-  transition: var(--transition-normal);
-  transform: translateX(-50%);
-}
-
-.navbar__link:hover::after {
-  width: 100%;
+  display: none;
 }
 
 .navbar {
@@ -127,12 +121,12 @@ html {
   border-bottom: none;
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(10, 10, 10, 0.95) !important;
   transition: var(--transition-normal);
 }
 
 .navbar--dark {
-  background: rgba(24, 25, 26, 0.95);
+  background: rgba(10, 10, 10, 0.95) !important;
 }
 
 /* Remove borders globally but keep shadows */
@@ -223,7 +217,13 @@ a {
 
 a:hover {
   color: var(--ifm-color-primary-darker);
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+/* Navbar links - NO underline on hover */
+.navbar__link:hover,
+.navbar__link:focus {
+  text-decoration: none !important;
 }
 
 /* Button base improvements */

@@ -129,12 +129,13 @@ html {
   background: rgba(17, 17, 17, 0.95) !important;
 }
 
-/* Remove borders globally but keep shadows */
+/* Remove borders globally */
 * {
   border: none !important;
 }
 
-.card, .hero, section {
+/* Only specific cards get shadows, not sections */
+.card, .hero {
   box-shadow: var(--shadow-md) !important;
 }
 
